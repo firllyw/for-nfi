@@ -1,0 +1,83 @@
+.adminCardsWrap {
+    color: white !important;
+    width: 70vw;
+}
+
+.adminCardsWrap .MuiPaper-root {
+    background-color: transparent !important
+}
+
+.adminCardsWrap .MuiTypography-colorInherit {
+    color: white !important;
+}
+
+.adminCardsWrap .MuiTablePagination-input {
+    color: white !important;
+}
+
+.adminCardsWrap .MuiIconButton-colorInherit {
+    color: white;
+}
+
+.adminCardsWrap .MuiIconButton-root.Mui-disabled {
+    color: rgba(255, 255, 255, 0.26);
+}
+
+.adminCardsWrap .MuiSelect-icon {
+    color: rgba(255, 255, 255, 0.54);
+}
+
+.adminCardsWrap .MuiTableCell-head {
+    color: white !important;
+    background-color: transparent;
+}
+
+.adminCardsWrap .MuiTableCell-body {
+    color: white;
+}
+
+.adminCardsWrap .MuiIconButton-root {
+    color: rgba(255, 255, 255, 0.54) !important;
+}
+
+.adminCardsWrap .MuiButton-root {
+    color: white;
+}
+
+.adminCardsWrap .MuiTypography-subtitle1 {
+    color: white;
+}
+
+.adminCardsWrap .MuiInputBase-input {
+    color: white;
+}
+
+.adminCardsWrap .MuiInput-underline:after {
+    border-bottom-color: white;
+}
+
+.adminCardsWrap .MuiButton-label {
+    color: white !important;
+    text-transform: capitalize;
+}
+
+.adminCardsWrap .MuiTableSortLabel-root.MuiTableSortLabel-active.MuiTableSortLabel-root.MuiTableSortLabel-active .MuiTableSortLabel-icon {
+    color: white;
+}
+
+.adminCardsWrap .MUIDataTableHeadCell-sortActive-82 {
+    color: white;
+}
+.homeButton {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.homeButton .MuiButton-root {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}

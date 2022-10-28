@@ -1,0 +1,66 @@
+{
+  "name": "metaslabs-ui",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/walletconnect-connector": "^6.2.13",
+    "@web3-react/walletlink-connector": "^6.2.13",
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.6.0",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^3.1.2",
+    "mui-datatables": "^3.8.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "4.0.3",
+    "redux-thunk": "^2.4.1",
+    "serve": "^13.0.2",
+    "web-vitals": "^2.1.4",
+    "web3": "^1.0.0-beta.46"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "build:prod": "CI= react-scripts build && rm -f ./build/static/js/*.map",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "clean": "rm -rf build && rm -rf node_modules",
+    "deploy": "cd build && aws s3 sync . s3://mint.metaslabs.io --delete && aws cloudfront create-invalidation --distribution-id E2VZSYHX4JGOT4 --paths '/*'",
+    "build:deploy": "npm run build:prod && cd build && aws s3 sync . s3://mint.metaslabs.io --delete && aws cloudfront create-invalidation --distribution-id E2VZSYHX4JGOT4 --paths '/*'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
